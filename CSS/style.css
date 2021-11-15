@@ -1,0 +1,734 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition:all .2s linear;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+    font-size:70%;
+    scroll-behavior: smooth;
+}
+
+.btn{
+    background: #333;
+    color:#fff;
+    padding:1.2rem 3rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+}
+
+.btn:hover{
+    background:rgb(248, 116, 242);
+}
+  
+/* header starts */
+
+header .fa-bars{
+    font-size:2rem;
+    border:1px solid;
+    padding: .4rem .5rem;
+    border-radius:.5rem;
+    display:none;
+    cursor: pointer;
+}
+
+header{
+    position: fixed;
+    left: 0;right: 0;top: 0;
+    border:1px solid #fff;
+    box-shadow: 0 .4rem .8rem rgba(0,0,0,.2);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1.2rem 7%;
+    background-color:#fff;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size:3rem;
+    font-weight: bold;
+    color:#333;
+}
+
+header .logo span{
+    color:rgb(248, 116, 242);
+}
+
+header .navbar a{
+    font-size:1.8rem;
+    padding-left: 1rem;
+    color:#666;
+}
+
+header .navbar a:hover{
+    color:rgb(248, 116, 242);
+}
+
+header .icons a{
+    font-size:2.2rem;
+    padding-left: 1.5rem;
+    color:#333;
+}
+
+header .icons a:hover{
+    color:rgb(248, 116, 242);
+}
+
+header .icons a.active{
+    color:rgb(248, 116, 242);  
+}
+
+.addcart{
+    position:absolute;
+    top:120%;
+    right:5rem;
+    border:1px solid;
+    box-shadow: 0 .2rem .8rem rgba(0,0,0,.3);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0, 0 0);
+    background: #fff;
+}
+
+.addcart.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.addcart .box-1{
+    display:flex;
+    padding:1rem 2rem;
+    padding-bottom:2.5rem;
+}
+
+.addcart .box-1 img{
+    height:7rem;
+    border:1px solid;
+    margin-right:1.5rem;
+}
+
+
+.addcart .box-1 .info h3{
+    font-size:1.8rem;
+}
+
+.addcart .box-1 .info p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color:#999;
+    padding:.4rem 0;
+}
+
+.addcart .box-1 .info .price{
+    font-weight:bold;
+    font-size: 1.5rem;
+}
+
+.addcart .box-1 .info .price span{
+    font-size: 1rem;
+    font-weight: lighter;
+    text-decoration: line-through;
+    color:#999;
+}
+
+.addcart .add-box{
+    border-top:1px solid;
+    padding:1rem;
+    padding-bottom: 2rem;;
+    text-align:center;
+}
+
+.addcart .add-box .total{
+    font-size:2rem;
+    font-weight: bold;
+    margin-bottom:2rem;
+}
+
+.addcart .add-box .total span{
+    font-size:1rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+    color:#999;
+}
+
+.addcart .add-box .add_btn{
+    background:#333;
+    color:#fff;
+    padding:1rem 6.3rem;
+    font-size:1.3rem;
+    font-weight:bold;
+}
+
+
+.addcart .add-box .add_btn:hover{
+    background:black;
+}
+
+
+.user{
+    border:1px solid #333;
+    position:absolute;
+    right:6%;
+    top:120%;
+    border-radius: .2rem;
+    background:#fff;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0, 0 0);
+}
+
+.user.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.user .info{
+    border-bottom:1px solid;
+    padding:1rem;
+    display:flex;
+}
+
+.user .info .U_pic{
+    border:1px solid;
+    margin-right:1rem;
+    background-color: #333;
+    color:#fff;
+    font-weight:bold;
+    font-size: 2rem;
+    padding:1.4rem 1rem;
+    border-radius:50%;
+}
+
+.user .info .U_info{
+    padding-top:1rem;
+}
+
+.user .info .U_info h3{
+    font-size:1.5rem;
+} 
+
+.user .info .U_info span{
+    color:#999;
+}
+
+.user .other_info a{
+    display:block;
+    font-size:1.5rem;
+    padding:1rem;
+    color:#333;
+}
+
+.user .other_info a:hover{
+    /* color:rgb(248, 116, 242); */
+    color:black;
+}
+
+.user .other_info span{
+    padding-left:10rem;
+}
+/* header ends */
+
+
+
+/* home start */
+
+.home{
+    min-height: 100vh;
+    background:url('/IMAGES/home-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    flex-wrap:wrap;
+    padding:5rem;
+}
+
+.home .home-box{
+    max-width: 60rem;   /*This is the mistake that i was doing in the morning, in the place of max-width i was taking max-height.*/
+}
+
+.home .home-box h1{
+    font-size: 5.5rem;
+    color:#333;
+}
+
+.home .home-box span{
+    font-size: 3rem;
+    color:rgb(255, 109, 189);
+}
+
+.home .home-box p{
+    font-size:2rem;
+    line-height:2.5rem;
+    color:#999;
+    margin:1rem 0;
+    margin-bottom: 2.5rem;
+}
+
+/* home ends */
+
+/* about start */
+
+.about{
+    padding:4rem 6rem;
+}
+
+.about h1{
+    text-align: center;
+    padding:1rem;
+    font-size: 3rem;
+    background-color: rgb(252, 223, 244);
+}
+
+.about h1 span{
+    color:rgb(255, 109, 189);
+}
+
+
+.about .about-box{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+
+.about .about-box .video-content{
+    position: relative;
+    flex:1 1 40rem;
+    box-shadow:0 .2rem .8rem rgba(0,0,0,.4);
+    padding:1.5rem;
+}
+
+.about .about-box .video-content video{
+    width: 100%; 
+    height: 100%;
+}
+
+.about .about-box .video-content h3{
+    font-size:3rem;
+    background-color:#fff;
+    padding:1rem;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:0;right:0;
+    text-align:center;
+    mix-blend-mode: screen;
+}
+
+.about .about-box .info{
+    padding: 1rem;
+    flex:1 1 30rem;
+}
+
+.about .about-box .info h3{
+    font-size:2.8rem;
+    color:#333;   
+}
+
+.about .about-box .info p{
+    font-size:1.5rem;
+    color:#999;
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+
+.about .about-box .info .btn{
+    position: relative;
+    top:2rem;
+}
+
+/* about end */
+
+
+/* Service-section starts */
+
+.service .service-container{
+    padding:4rem 6rem;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:2rem;
+    background-color:rgb(224, 223, 223)
+}
+
+.service .service-container .service-box{
+    flex:1 1 25rem;
+    background-color:#fff;
+    box-shadow: 0 .2rem .8rem rgba(0,0,0,.3);
+    display:flex;
+    padding:1rem;
+}
+
+.service .service-container .service-box img{
+    height:7rem;
+    margin-right: 1rem;
+}
+
+.service .service-container .service-box .info h3{
+    font-size:1.6rem;
+    margin-top:.8rem;
+    margin-bottom: .5rem;
+}
+
+.service .service-container .service-box .info span{
+    font-size:1.3rem;
+    color:#999;
+}
+
+/* Service-section ends */
+
+.product{
+    padding:5rem 6rem;
+}
+
+.product h1{
+    text-align: center;
+    padding:1rem;
+    font-size: 3rem;
+    background-color: rgb(252, 223, 244);
+}
+
+.product h1 span{
+    color:rgb(255, 109, 189);
+}
+
+.product .product-container{
+    margin-top:5rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.5rem;
+}
+
+.product .product-container .product-box{
+    box-shadow: 0 .2rem .8rem rgba(0,0,0,.5);
+    border-radius: .2rem;
+    flex:1 1 28rem;
+    text-align: center;
+    position: relative;
+}
+
+.product .product-container .product-box .discount{
+    font-size:2rem;
+    color:rgb(253, 84, 202);
+    background-color:rgb(250, 228, 246);
+    position: absolute;
+    left:0;
+    padding:.3rem 0;
+    margin:.5rem;
+    border-radius: .3rem;
+    z-index: 100;
+}
+
+.product .product-container .product-box .image{
+    padding-top:2rem;
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.product .product-container .product-box .image img{
+    height:22rem;
+}
+
+.product .product-container .product-box:hover .image img{ 
+    transform: scale(1.1);
+}
+
+
+.product .product-container .product-box .icons{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    background-color:rgb(253, 84, 202);
+    position: absolute;
+    bottom:-7rem;
+    left:0;right:0;
+}
+
+.product .product-container .product-box:hover .icons{
+    bottom: 0;
+}
+
+.product .product-container .product-box .icons a{
+    font-size:1.8rem;
+    height: 4rem;
+    line-height: 4rem;
+    width:50%;
+    color:#fff;
+}
+
+.product .product-container .product-box .icons a:hover{
+    background-color:#333;
+}
+
+.product .product-container .product-box .icons .add_cart{
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    width: 100%;
+}
+
+.product .product-container .product-box .content h3{
+    font-size:2.5rem;
+    color:#333;
+    padding:1rem;
+    padding-top: .5rem;
+}
+
+.product .product-container .product-box .content .price{
+    font-size:2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.product .product-container .product-box .content .price span{
+    font-size:1.5rem;
+    font-weight: lighter;
+    text-decoration: line-through;
+    color:#999;
+}
+
+/* review starts */
+
+.review{
+    padding:3rem 6rem;
+}
+
+.review h1{
+    font-size:3rem;
+    text-align: center;
+    padding:1rem;
+    background-color: rgb(252, 223, 244);
+}
+
+.review h1 span{
+    color:rgb(255, 109, 189);
+}
+
+.review .review-container{
+    display:flex;
+    flex-wrap:wrap;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap:1.5rem;
+}
+
+.review .review-container .review-box{
+    border-radius: .3rem;
+    box-shadow: 0 .2rem .8rem rgba(0,0,0,.3);
+    padding:2rem;
+    flex:1 1 25rem;
+    position: relative;
+}
+
+.review .review-container .review-box .stars{
+    font-size:1.8rem;
+    color:rgb(253, 102, 185);
+}
+
+.review .review-container .review-box p{
+    font-size:1.5rem;
+    color:#999;
+    padding:1.5rem 0;
+}
+
+.review .review-container .review-box .User_info{
+    display:flex;
+    align-items: center;
+}
+
+.review .review-container .review-box .User_info img{
+    height:6rem;
+    border-radius: 50%;
+    margin-right:1rem;
+}
+
+.review .review-container .review-box .User_info .info h3{
+    font-size:2rem;
+}
+
+.review .review-container .review-box .User_info .info span{
+    font-size:1.5rem;
+    color:#999;
+}
+
+.review .review-container .review-box .fa-quote-right{
+    font-size:6rem;
+    color:rgb(197, 196, 196);
+    position:absolute;
+    right: 2rem;
+    bottom: 2.2rem;
+}
+
+/* review ends */
+
+
+/* contact starts*/
+
+.contact{
+    padding:3rem 6rem;
+    margin-bottom: 3rem;
+}
+
+.contact h1{
+    font-size:3rem;
+    background-color: rgb(252, 223, 244);
+    text-align: center;
+    padding:1rem;
+}
+
+.contact h1 span{
+    color:rgb(255, 109, 189);
+}
+
+.contact .contact-container{
+    display:flex;
+    flex-wrap: wrap-reverse;
+    gap:1.5rem;
+    align-items: center;
+    margin-top:5rem
+}
+
+.contact .contact-container .contact-form{
+    border:1px solid #fff;
+    flex:1 1 30rem;
+    box-shadow: 0 .2rem .8rem rgba(0,0,0,.3);
+    border-radius: .3rem;
+    padding:2rem 2.5rem;
+    background-color: #fff;
+}
+
+.contact .contact-container .box{
+    padding:1rem;
+    font-size:1.5rem;
+    width:95%;
+    color:#333;
+    margin:.7rem 0;
+    border:.1rem solid #333;
+    border-radius: .3rem;
+}
+
+.contact .contact-container textarea{
+    resize:none;
+}
+
+.contact .contact-container .btn{
+    border:.1rem solid #fff;
+    margin-top:1rem;
+}
+
+.contact .contact-container .img_cont{
+    flex:1 1 30rem;
+}
+
+.contact .contact-container .img_cont img{
+    width:100%;
+    object-fit: cover;
+}
+
+/* contact ends*/
+
+
+/* footer starts */
+
+footer .footer-container{
+    padding:3rem 6rem;
+    display: flex;
+    flex-wrap:wrap;
+    gap:1.5rem;
+    border-top: 1px solid;
+}
+
+footer .footer-container .footer-box{
+    flex: 1 1 25rem;
+}
+
+footer .footer-container .footer-box a{
+    display:block;
+    color:#999;
+    font-size:1.5rem;
+    line-height: 3rem;
+}
+
+footer .footer-container .footer-box a:hover{
+    text-decoration: underline;
+    color:#000;
+}
+
+footer .footer-container .footer-box h3{
+    font-size:2rem;
+    padding-bottom: 1rem;
+}
+
+footer .credit{
+    padding:1.5rem;
+    text-align: center;
+    font-size:1.6rem;
+    color:#fff;
+    background: #333;
+}
+
+footer .credit span{
+    color:rgb(247, 155, 231);
+    font-weight: bold;
+}
+
+/* footer ends */
+
+
+
+
+
+
+/* Media-Query */
+@media only screen and (max-width:980px){
+    html{
+        font-size:60%;
+    }
+}
+
+@media only screen and (max-width:830px){
+    html{
+        font-size:70%;
+    }
+
+    .navbar{
+        position:absolute;
+        top:105%;
+        left:0;
+        right:0;
+        background: #fff;
+        box-shadow: 0 .2rem .8rem rgba(0,0,0,.2);
+        padding:1.5rem 1.5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0, 0 0);
+    }
+
+    .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+
+    .navbar a{
+        display:block;
+        text-align: center;
+        padding:1rem;
+        margin-top:.8rem;
+        border:1px solid #fff;
+        background: rgb(242, 242, 242);
+    }
+
+    .navbar a:hover{
+        border:1px solid #333;
+    }
+
+    header .fa-bars{
+        display:block;
+    }
+    
+    header .icons .fa-user{
+        display:none;
+    }
+}
+
+
